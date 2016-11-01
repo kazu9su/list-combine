@@ -12,10 +12,10 @@ class ListCombination
         $result = [];
         foreach ($base as $item1) {
             foreach ($array1 as $item2) {
-                if ($n != 0) {
-                    $result[] = array_merge($item1, [$item2]);
-                } else {
+                if ($n == 0) {
                     $result[] = [$item1, $item2];
+                } else {
+                    $result[] = array_merge($item1, [$item2]);
                 }
             }
         }
